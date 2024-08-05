@@ -67,47 +67,6 @@ void addContact(){
     scanf("%s", phoneBook[amountContact].firstName);
     printf("Введи фамилию \n");
     scanf("%s", phoneBook[amountContact].lastName);
-    printf("Введи отчество \n");
-    scanf("%s", phoneBook[amountContact].patronymic);
-    printf("Введи место работы (нажмите Enter, если не хотите вводить) \n");
-    fgets(phoneBook[amountContact].jobPlace, sizeof(phoneBook[amountContact].jobPlace), stdin);
-    if (phoneBook[amountContact].jobPlace[0] == '\n') {
-        phoneBook[amountContact].jobPlace[0] = '\0'; // Оставляем поле пустым
-    }
-    printf("Введи должность \n");
-    scanf("%s", phoneBook[amountContact].post);
-    printf("Введи введи email \n");
-    scanf("%s", phoneBook[amountContact].email);
-
-    phoneBook[amountContact].amountPhone = 0;
-    int choice = 1;
-    while (phoneBook[amountContact].amountPhone < 5 && choice == 1)
-    {
-        printf("Введи номер телефона: ");
-        scanf("%s", phoneBook[amountContact].phones[phoneBook[amountContact].amountPhone].number);
-        phoneBook[amountContact].amountPhone++;
-        choice = 0;
-        if (phoneBook[amountContact].amountPhone < 5){
-            printf("Чтобы добавить ещё номер нажмите 1: ");
-            scanf("%d", &choice);
-            while(getchar() != '\n');
-        }
-    }
-
-    phoneBook[amountContact].amountLinks = 0;
-    choice = 1;
-    while (phoneBook[amountContact].amountLinks < 5 && choice == 1)
-    {
-        printf("Введи ссылку: ");
-        scanf("%s", phoneBook[amountContact].links[phoneBook[amountContact].amountLinks].url);
-        phoneBook[amountContact].amountLinks++;
-        choice = 0;
-        if (phoneBook[amountContact].amountLinks < 5){
-            printf("Чтобы добавить ещё ссылку нажмите 1: ");
-            scanf("%d", &choice);
-            getchar();
-        }
-    }
     amountContact++;
 }
 
