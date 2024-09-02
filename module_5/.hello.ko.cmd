@@ -1,1 +1,0 @@
-savedcmd_/home/chydo/module_5/hello.ko := ld -r -m elf_x86_64 -z noexecstack --build-id=sha1  -T scripts/module.lds -o /home/chydo/module_5/hello.ko /home/chydo/module_5/hello.o /home/chydo/module_5/hello.mod.o
