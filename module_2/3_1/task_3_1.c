@@ -81,8 +81,8 @@ int main() {
     mode_t mode;
 
     while (1) {
-        printf("\n1. Ввести права доступа вручную\n");
-        printf("2. Считать права доступа из файла\n");
+        printf("\n1. Ввести права доступа\n");
+        printf("2. Получить права доступа из файла\n");
         printf("3. Для выхода\n");
 
         fgets(input, sizeof(input), stdin);
